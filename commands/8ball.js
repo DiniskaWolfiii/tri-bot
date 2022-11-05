@@ -215,9 +215,8 @@ module.exports = {
             .setThumbnail('https://cdn.pixabay.com/photo/2015/09/05/07/17/pool-ball-923833_960_720.png')
             .addFields(
                 { name: 'Frage', value: frage},
-                {name: 'Antwort', vlaue: antworten[randomNumber]}
+                { name: 'Antwort', value: antworten[randomNumber]},
             )
-            .setFooter({text: 'Question by ' + interaction.user.username, iconURL: interaction.user.displayAvatarURL})
 
         await interaction.editReply({ embeds: [krassesEmbed] });
     },
