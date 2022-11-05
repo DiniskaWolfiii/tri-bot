@@ -16,7 +16,7 @@ module.exports = {
      */
     async execute(interaction) {
         await interaction.deferReply();
-        const Discord = require('discord.js');
+        const {EmbedBuilder, Embed} = require('discord.js');
         const frage = interaction.options.getString('frage');
         let antworten = [
             'Ja',
@@ -209,13 +209,15 @@ module.exports = {
 
         let randomNumber = Math.floor(Math.random() * antworten.length);
 
-        let krassesEmbed = new Discord.MessageEmbed()
+        let krassesEmbed = new EmbedBuilder()
             .setColor('#636363')
             .setTitle(':8ball: 8Ball')
             .setThumbnail('https://cdn.pixabay.com/photo/2015/09/05/07/17/pool-ball-923833_960_720.png')
-            .addField('Frage', frage)
-            .addField('Antwort', antworten[randomNumber])
-            .setFooter('Question by ' + interaction.user.username, interaction.user.displayAvatarURL)
+            .addFields(
+                { name: 'Frage', value: frage},
+                {name: 'Antwort', vlaue: antworten[randomNumber]}
+            )
+            .setFooter({text: 'Question by ' + interaction.user.username, iconURL: interaction.user.displayAvatarURL})
 
         await interaction.editReply({ embeds: [krassesEmbed] });
     },
