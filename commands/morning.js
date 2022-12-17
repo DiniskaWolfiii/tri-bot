@@ -21,6 +21,7 @@ module.exports = {
             `https://cdn.discordapp.com/attachments/967862584172744775/1034588244442099822/my-hero-academia-deku-looks-phone-m07n1oxrta64vsem.gif`,
             `https://cdn.discordapp.com/attachments/967862584172744775/1034588244832165918/tumblr_p76ej4j5Yd1wksxcuo1_400.gif`,
             `https://cdn.discordapp.com/attachments/967862584172744775/1034589238949326959/6e16ffd10360603454007a03d813c8a75de86347.gif`,
+            `https://cdn.discordapp.com/attachments/968568845113638925/1053629032073269348/Media_221217_120432.gif`
         ]
         if (goodMorningUser) return await interaction.editReply(`*${interaction.user} wünscht ${goodMorningUser} einen guten Morgen!*`);
         await interaction.editReply(`*${interaction.user} wünscht allen einen guten Morgen!*`);
