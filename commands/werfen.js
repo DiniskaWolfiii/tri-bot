@@ -143,7 +143,7 @@ module.exports = {
             'einer Random Stadt',
             'nichts',
             'einem Auto',
-            'ÖKOLJUHBEFPGIWUBEPFGIKUWZGE=F(IPUNWHEPI$O)G=/UZGHWEPOG)IU(HW§=$)T(/"HZ§?)T(U/HGWEPIOVNUDVPOSJvopwu48tzh0ß39284gujhaß9we487zht3ß9rgvjnaße958zg==',
+            'ÖKOLJUHBEFPGIWUBEPFGIKUWZGE=F(IPUNWHEPI$O)G=/UZGHWEPOG)IU(HW§=$)T(/"HZ§?)T(U/HGWEPIOVNUDVPOSJvopwu48tzh0ß39284gujhaß9we487zht3ß9rgvjnaße958zg',
             'Boomern',
             'Lebenshilfe',
             'Depression',
@@ -199,6 +199,7 @@ module.exports = {
             'Russland',
             'Deutschland',
             'einem Todesstrahl',
+            'einem Buch',
             'einem Buch. GET EDUCATED!',
             'sich selbst',
             'einem Schornstein',
@@ -234,6 +235,7 @@ module.exports = {
             'Ligma',
             "Breath'nt",
             'einer benutzten Atombombe',
+            'einer unbenutzten Atombombe',
             'Kamehameha'
         ]
         for (let i = antworten.length - 1; i > 0; i--) {
