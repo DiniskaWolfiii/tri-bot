@@ -16,6 +16,7 @@ class TempVoice(commands.Cog): # create a class for our cog that inherits from c
         #joinToCreateVoice = 1234040036299640844 # the voice channel id that will be used to create the channel - Wolfiiis Server
         #joinToCreateParent = 1234039999775772768 # the category id where the channel will be created - Wolfiiis Server
 
+        afkChannel = 1234182497668038777 # the AFK channel id - Tri Server
 
         if before.channel is None: # if the member was not in a voice channel before
 
@@ -36,14 +37,14 @@ class TempVoice(commands.Cog): # create a class for our cog that inherits from c
         else: # if the member moved to another channel
             if before.channel.id == after.channel.id: # if the member is in the same channel
                 return
-            elif before.channel.id == joinToCreateVoice: # if the member was in the join to create voice channel
+            elif before.channel.id == joinToCreateVoice or before.channel.id == afkChannel: # if the member was in the join to create voice channel or AFK channel
                 return
             elif before.channel.category_id != joinToCreateParent and after.channel.category_id == joinToCreateParent and after.channel.id != joinToCreateVoice: # if member joined a temp channel and was not in a temp channel before
                 return
             elif before.channel.category_id == joinToCreateParent and after.channel.category_id != joinToCreateParent: # if member switched from a temp channel to a normal channel
                 if len(before.channel.members) == 0: # if there are no more users in the channel
                     await deleteTempVoice(self.bot, before.channel.id) # delete the channel
-            elif after.channel.id == joinToCreateVoice: # if the member joined the join to create voice channel
+            elif after.channel.id == joinToCreateVoice: # if the member switched to the join to create voice channel
                 if before.channel.category_id != joinToCreateParent: # if the member was not in a temp channel before
                     await createTempVoice(self.bot, joinToCreateParent, member) # create the temp channel
                 elif before.channel.category_id == joinToCreateParent and before.channel.id != joinToCreateVoice: # if the member was in a temp channel before and joins the join to create voice channel
