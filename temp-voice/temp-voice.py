@@ -26,7 +26,7 @@ class TempVoice(commands.Cog): # create a class for our cog that inherits from c
 
         elif after.channel is None: # if the member is not in a voice channel after
 
-            if before.channel.id == joinToCreateVoice: # if the member left the join to create voice channel
+            if before.channel.id == joinToCreateVoice or before.channel.id == afkChannel: # if the member left the join to create voice channel or AFK channel
                 return
             elif len(before.channel.members) == 0 and before.channel.category.id == joinToCreateParent: # if there are no more users in the channel
                 await deleteTempVoice(self.bot, before.channel.id) # delete the channel
