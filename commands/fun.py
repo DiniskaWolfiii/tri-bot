@@ -850,7 +850,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} bonkt {member.mention}! 🤏🧠')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} bonkt sich selbst! 🤏🧠')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="boop", description="Boope jemanden.")
     async def boop(
@@ -1017,7 +1017,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} tanzt mit {member.mention}! 💃🕺')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} tanzt alleine! 💃🕺')
-        ctx.send('https://cdn.discordapp.com/attachments/967862584172744775/1034587824789405807/a47kehfpj7t91.gif')
+        await ctx.send('https://cdn.discordapp.com/attachments/967862584172744775/1034587824789405807/a47kehfpj7t91.gif')
 
     @discord.slash_command(name="drink", description="Trinke etwas!")
     async def drink(
@@ -1082,7 +1082,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
         random.shuffle(drinks)
         random_drink = random.choice(drinks)
         await ctx.respond(f'{ctx.author.mention} trinkt {random_drink}! 🥤')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="feed", description="Füttere jemanden.")
     async def feed(
@@ -1121,7 +1121,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} zündet {member.mention} an! 🔥')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} zündet sich selbst an! 🔥')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="freeze", description="Friere andere ein!")
     async def freeze(
@@ -1142,7 +1142,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} friert {member.mention} ein! ❄️')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} friert sich selbst ein! ❄️')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="geld", description="Gib oder erhalte Geld von jemandem.")
     async def geld(
@@ -1254,7 +1254,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} umarmt {member.mention}! 🤗')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} umarmt sich selbst! 🤗')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="kill", description="Töte andere!")
     async def kill(
@@ -1277,7 +1277,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} tötet {member.mention}! 💀')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} tötet sich selbst! 💀')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="knife", description="Werfe mit Messer!")
     async def knife(
@@ -1311,7 +1311,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} hat {member.mention} ganz doll lieb! ❤️')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} hat sich selbst ganz doll lieb! ❤️')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="morning", description="Wünsche anderen einen guten Morgen!")
     async def morning(
@@ -1333,7 +1333,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} wünscht {member.mention} einen guten Morgen! 🌞')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} wünscht allen einen guten Morgen! 🌞')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="niesen", description="Niese. Das wars.")
     async def niesen(
@@ -1368,7 +1368,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} wünscht {member.mention} eine gute Nacht! 🌙')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} wünscht allen eine gute Nacht! 🌙')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="pat", description="Patte jemanden.")
     async def pat(
@@ -1391,7 +1391,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} patted {member.mention}! 🐾')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} patted sich selbst! 🐾')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
     
     @discord.slash_command(name="prost", description="Prost!")
     async def prost(
@@ -1442,7 +1442,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} schlägt {member.mention}! 👊')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} hat das Verlangen jemanden zu schlagen! 👊')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
 
     @discord.slash_command(name="sad", description="Sei traurig.")
     async def sad(
@@ -1512,7 +1512,7 @@ class Fun(commands.Cog): # create a class for our cog that inherits from command
             await ctx.respond(f'{ctx.author.mention} starrt {member.mention} an! 👀')
         elif not member:
             await ctx.respond(f'{ctx.author.mention} starrt in die Leere! 👀')
-        ctx.send(gifs[random.randint(0, len(gifs) - 1)])
+        await ctx.send(gifs[random.randint(0, len(gifs) - 1)])
         
     @discord.slash_command(name="stups", description="Stupse jemanden.")
     async def stups(
