@@ -16,7 +16,7 @@ class TempVoice(commands.Cog): # create a class for our cog that inherits from c
         #joinToCreateVoice = 1234040036299640844 # the voice channel id that will be used to create the channel - Wolfiiis Server
         #joinToCreateParent = 1234039999775772768 # the category id where the channel will be created - Wolfiiis Server
 
-        afkChannel = 1234182497668038777 # the AFK channel id - Tri Server
+        afkChannel = 1234183764784185397 # the AFK channel id - Tri Server
 
         if before.channel is None: # if the member was not in a voice channel before
 
