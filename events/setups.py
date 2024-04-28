@@ -1,12 +1,15 @@
-module.exports = {
-    name: 'ready',
-    once: true,
-/**
- * @param {import('discord.js').Client} client
- */
-    execute (client) {
-        console.log(`Succesfully logged in as ${client.user.username} with ID ${client.user.id}!`);
-        let stati = [
+import discord
+from discord.ext import commands
+import random
+
+class Setups(commands.Cog): # create a class for our cog that inherits from commands.Cog
+    # this class is used to create a cog, which is a module that can be added to the bot
+
+    def __init__(self, bot): # this is a special method that is called when the cog is loaded
+        self.bot = bot # save the bot instance
+    @commands.Cog.listener()
+    async def on_ready(self): # this is called when the bot is ready
+        stati = [
             'Habe ich den Ofen ausgeschaltet?',
             'Sollte ich doch nochmal pinkeln gehen?',
             'Gibt es intelligentes Leben auf der Erde?',
@@ -29,7 +32,6 @@ module.exports = {
             'Sorgt für Recht und Ordnung...',
             '👀'
         ]
-
-        client.user.setActivity(stati[Math.floor(Math.random() * stati.length)], { type: 'PLAYING' });
-    }
-}
+        await self.bot.change_presence(activity=discord.Game(name=random.choice(stati)))
+def setup(bot): # this is called by Pycord to setup the cog
+    bot.add_cog(Setups(bot)) # add the cog to the bot
