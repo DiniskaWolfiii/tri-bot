@@ -13,7 +13,7 @@ class Setups(commands.Cog): # create a class for our cog that inherits from comm
 
     @commands.Cog.listener()
     async def on_ready(self): # this is called when the bot is ready
-        self.change_status()
+        await self.change_status()
     
     @tasks.loop(minutes=5)
     async def change_status(self):
