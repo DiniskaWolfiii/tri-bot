@@ -1,6 +1,23 @@
 import discord
 from discord.ext import commands, tasks
 import random
+from flask import Flask, request
+import threading
+from dotenv import load_dotenv
+import requests
+import os
+
+load_dotenv()
+
+app = Flask(__name__)
+
+@app.route('/tri-bot-ping', methods=['POST'])
+def ping():
+    return "OK", 200
+
+def run():
+    print("Starting Flask Server")
+    app.run(host='0.0.0.0', port=os.getenv('STATUS_UPDATE_PORT'))
 
 class Setups(commands.Cog): # create a class for our cog that inherits from commands.Cog
     # this class is used to create a cog, which is a module that can be added to the bot
@@ -15,6 +32,7 @@ class Setups(commands.Cog): # create a class for our cog that inherits from comm
     @commands.Cog.listener()
     async def on_ready(self): # this is called when the bot is ready
         await self.change_status()
+        threading.Thread(target=run).start()
     
     @tasks.loop(minutes=5)
     async def change_status(self):
