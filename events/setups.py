@@ -111,5 +111,9 @@ class Setups(commands.Cog): # create a class for our cog that inherits from comm
         ]
         await self.bot.change_presence(activity=discord.CustomActivity(name=random.choice(stati))) # set the bot's status to a random string from the stati list
 
+    @change_status.before_loop
+    async def before_change_status(self):
+        await self.bot.wait_until_ready()
+
 def setup(bot): # this is called by Pycord to setup the cog
     bot.add_cog(Setups(bot)) # add the cog to the bot
