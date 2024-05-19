@@ -24,10 +24,10 @@ class Setups(commands.Cog): # create a class for our cog that inherits from comm
 
     def __init__(self, bot): # this is a special method that is called when the cog is loaded
         self.bot = bot # save the bot instance
+        self.change_status.start()
 
     def cog_unload(self):
         self.change_status.cancel()
-        self.change_status.start()
 
     @commands.Cog.listener()
     async def on_ready(self): # this is called when the bot is ready
