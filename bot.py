@@ -53,3 +53,5 @@ if __name__ == '__main__': # if the file is the main file
                 print(f"{i} wurde geladen") # print that the file was loaded
 
 bot.run(os.getenv('TOKEN')) # run the bot with the token
+
+# Test
