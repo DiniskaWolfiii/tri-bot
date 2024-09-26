@@ -24,4 +24,4 @@ requests==2.32.3
 smmap==5.0.1
 urllib3==2.2.2
 Werkzeug==3.0.4
-yarl==1.11.0
+yarl==1.11.1
