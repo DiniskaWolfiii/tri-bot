@@ -14,7 +14,7 @@ GitPython==3.1.45
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
-MarkupSafe==3.0.2
+MarkupSafe==3.0.3
 multidict==6.6.4
 py-cord==2.6.1
 PyNaCl==1.6.0
